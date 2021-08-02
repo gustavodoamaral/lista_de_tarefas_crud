@@ -18,7 +18,10 @@ from django.urls import path
 
 from webdev.home_view import home
 
+from django.urls.conf import include
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
+    path('tarefas/', include('webdev.tarefas.urls')),
 ]
